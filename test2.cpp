@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void smath();
+void smkath();
 void hist();
 void com();
 void buss();
