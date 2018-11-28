@@ -16,27 +16,27 @@ void sci();
 void findbook();
 void addbook();
 void bookcategories();
-void booktittle();
+void booktitle();
 int main()
 {
 	char choice;
 	int z;
-	cout<<"\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 welcome to Ayam Bookstores \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2"<<endl;
-	
+	cout<<"\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 Welcome to Ayam Bookstores \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2"<<endl;
+
 	cout<<"already member ? (Y/N)"<<endl;
-	
+
 	cin>>choice;
 	while(choice!='Y'||choice!='N')
 	{
 		if (choice=='Y')
-		{	
+		{
 			login();
 			break;
 		}
 		else if(choice =='N')
 		{
 			sign_up();
-			break;	
+			break;
 		}
 		else;
 		{
@@ -45,13 +45,13 @@ int main()
 		cin>>choice;
 		}
 	}
-	
+
 	cout<<"Main Menu : \n\n";
 	cout<<" 1) Add book"<<endl<<" 2) Delete book"<<endl<<" 3)Exit"<<endl;
 	cout<<" What do you want?";
 	cin>>z;
-	
-	while(z<1 || z>3)					
+
+	while(z<1 || z>3)
 	{
 		cout<<"\nInvalid!\n";
 		cout<<"\nPlease re-enter choice : ";
@@ -62,13 +62,13 @@ int main()
 		case 1 : cout<<"Add book\n";addbook(); break;
 		case 2 : cout<<"Delete book\n"; break;
 		case 3 : cout<<"Thank you and come again"; break;
-	
+
 	}
- return 0;	
+ return 0;
 }
 void sign_up(void)
 {
-	
+
 	string name, pass, npass;
 	int Id_num;
 	cout<<"PLEASE SIGN UP FIRST BEFORE ENTERING THE BOOKSTRORE!!!"<<endl;
@@ -87,7 +87,7 @@ void login(void)
 {
 	string pass;
 	int Id_num;
-	
+
 	cout<<"Enter your Id : ";
 	cin>>Id_num;
 	cout<<"Enter your password : ";
@@ -97,49 +97,49 @@ void login(void)
 void addbook()
 {
 	int press;
-	cout<<"Press 1 if want to find your book by categories or Press 2 if you want to find by tittle";
+	cout<<"Press 1 if you want to find your book by categories or Press 2 if you want to find your book by title";
 	cin>>press;
-	
-	while(press<1 || press>2)					
+
+	while(press<1 || press>2)
 	{
 		cout<<"\nInvalid!\n";
 		cout<<"\nPlease re-enter choice : ";
 		cin>>press;
 	}
-	
+
 	switch(press)
 	{
 		case 1 : cout<<"Book Categories\n"; bookcategories(); break;
-		case 2 : cout<<"Book tittle\n"; booktittle(); break;
+		case 2 : cout<<"Book title\n"; booktitle(); break;
 	}
-	
+
 }
-	
-	
-void booktittle(){	
-	string tittle;
-	string a[25]={"Agricultural Sciences","Anatomy","Animals","Astronomy","Calculus","Medieval","Middle Eastern","Military","Modern","American", 
-	"Database","CAD","Computer Science","Information Technology","Love Programming","Finance","Economy","International","Careers", 
+
+
+void booktitle(){
+	string title;
+	string a[25]={"Agricultural Sciences","Anatomy","Animals","Astronomy","Calculus","Medieval","Middle Eastern","Military","Modern","American",
+	"Database","CAD","Computer Science","Information Technology","Love Programming","Finance","Economy","International","Careers",
 	"Public Relation","Horror","Humor","Space","Role Playing","Anthologies"};
 	bool have = false;
-	
-	cout<<"Enter the book tittle : ";
-	cin>>tittle;
-	
+
+	cout<<"Enter the book title : ";
+	cin>>title;
+
 	while(!have){
 		for(int i=0; i<25;i++)
 		{
-			if(tittle == a[i])
+			if(title == a[i])
 			{
 				have = true;
 			}
 		}
 		if (!have){
-			cout<< "Invalid!, Book doesn't exist, enter the book tittle : ";
-			cin >> tittle;
+			cout<< "Invalid!, Book doesn't exist, enter the book title : ";
+			cin >> title;
 		}
 	}
-		
+
 }
 
 
@@ -151,14 +151,14 @@ void bookcategories()
 	cout<<"***Info : Get 30% discount for History and Bussiness books\n\n";
 	cout<<"Please choose one : ";
 	cin>>choose;
-	
-	while(choose<1 || choose>5)					
+
+	while(choose<1 || choose>5)
 	{
 		cout<<"\nInvalid!\n";
 		cout<<"\nPlease re-enter choice : ";
 		cin>>choose;
 	}
-	
+
 
 	switch(choose)
 	{
@@ -166,7 +166,7 @@ void bookcategories()
 		case 2 : cout<<"History\n"; hist(); break;
 		case 3 : cout<<"Computer and Tech\n"; com(); break;
 		case 4 : cout<<"Bussiness\n";buss(); break;
-		case 5 : cout<<"Science-Fiction\n"; sci(); break;					
+		case 5 : cout<<"Science-Fiction\n"; sci(); break;
 	}
 
 }
@@ -183,7 +183,7 @@ void smath ()
 		case 2 : cout<<"Anatomy\n"<<"The price : RM 75" ; break;
 		case 3 : cout<<"Animals\n"<<"The price : RM 25.00"; break;
 		case 4 : cout<<"Astronomy\n"<<"The price : RM 85.00"; break;
-		case 5 : cout<<"Calculus\n"<<"The price : RM 150.00"; break;							
+		case 5 : cout<<"Calculus\n"<<"The price : RM 150.00"; break;
 	}
 }
 
@@ -202,7 +202,7 @@ void hist ()
 		case 3 : cout<<"Military\n"<<"The price : RM 75"; break;
 		case 4 : cout<<"Modern\n"<<"The price : RM 75"; break;
 		case 5 : cout<<"American\n"<<"The price : RM 75"; break;
-							
+
 	}
 }
 
@@ -213,7 +213,7 @@ void com ()
 	cout<< " 1) Database"<<endl <<" 2) CAD"<<endl<< " 3) Computer Science"<<endl<<" 4) Information Technology"<<endl<<" 5) Love Programming\n\n";
 	cout<<"Please choose one : ";
 	cin>>x;
-	
+
 		switch(x)
 	{
 		case 1 : cout<<"Database\n"<<"The price : RM 75";break;
@@ -221,7 +221,7 @@ void com ()
 		case 3 : cout<<"Computer Science\n"<<"The price : RM 75"; break;
 		case 4 : cout<<"Information Technology\n"<<"The price : RM 75"; break;
 		case 5 : cout<<"Love Programming\n"<<"The price : RM 75"; break;
-							
+
 	}
 }
 
@@ -232,7 +232,7 @@ void buss ()
 	cout<< " 1) Finance"<<endl <<" 2) Economy"<<endl<< " 3) International"<<endl<<" 4) Careers"<<endl<<" 5) Public Relation\n\n";
 	cout<<"Please choose one : ";
 	cin>>x;
-	
+
 		switch(x)
 	{
 		case 1 : cout<<"Finance\n"<<"The price : RM 75";break;
@@ -240,7 +240,7 @@ void buss ()
 		case 3 : cout<<"International\n"<<"The price : RM 75"; break;
 		case 4 : cout<<"Careers\n"<<"The price : RM 75"; break;
 		case 5 : cout<<"Public Relation\n"<<"The price : RM 75"; break;
-							
+
 	}
 }
 
@@ -251,15 +251,13 @@ void sci()
 	cout<< " 1) Horror"<<endl <<" 2) Humor"<<endl<< " 3) Space"<<endl<<" 4) Role Playing"<<endl<<" 5) Anthologies\n\n";
 	cout<<"Please choose one : ";
 	cin>>x;
-	
+
 	switch(x)
 	{
 		case 1 : cout<<"Horror\n"<<"The price : RM 75";break;
 		case 2 : cout<<"Humor\n"<<"The price : RM 75"; break;
 		case 3 : cout<<"Space\n"<<"The price : RM 75"; break;
 		case 4 : cout<<"Role Playing\n"<<"The price : RM 75"; break;
-		case 5 : cout<<"Anthologies\n"<<"The price : RM 75"; break;						
+		case 5 : cout<<"Anthologies\n"<<"The price : RM 75"; break;
 	}
 }
-
-
