@@ -16,8 +16,10 @@ void sci();
 void findbook();
 void addbook();
 void bookcategories();
-void booktittle();
+void booktitle();
+
 int main()
+
 {
 	char choice;
 	int z;
@@ -48,7 +50,7 @@ int main()
 	
 	cout<<"Main Menu : \n\n";
 	cout<<" 1) Add book"<<endl<<" 2) Delete book"<<endl<<" 3)Exit"<<endl;
-	cout<<" What do you want?";
+	cout<<" Please choose : ";
 	cin>>z;
 	
 	while(z<1 || z>3)					
@@ -83,9 +85,11 @@ void sign_up(void)
 	cin>>npass;
 	login();
 	}
+	
 void login(void)
 {
 	string pass;
+	string members[5][2];
 	int Id_num;
 	
 	cout<<"Enter your Id : ";
@@ -97,51 +101,22 @@ void login(void)
 void addbook()
 {
 	int press;
-	cout<<"Press 1 if want to find your book by categories or Press 2 if you want to find by tittle";
+	cout<<"Press 1 if want to find your book (categories)";
 	cin>>press;
 	
-	while(press<1 || press>2)					
+	while(press!=1)					
 	{
 		cout<<"\nInvalid!\n";
 		cout<<"\nPlease re-enter choice : ";
 		cin>>press;
 	}
 	
-	switch(press)
-	{
-		case 1 : cout<<"Book Categories\n"; bookcategories(); break;
-		case 2 : cout<<"Book tittle\n"; booktittle(); break;
-	}
-	
-}
-	
-	
-void booktittle(){	
-	string tittle;
-	string a[25]={"Agricultural Sciences","Anatomy","Animals","Astronomy","Calculus","Medieval","Middle Eastern","Military","Modern","American", 
-	"Database","CAD","Computer Science","Information Technology","Love Programming","Finance","Economy","International","Careers", 
-	"Public Relation","Horror","Humor","Space","Role Playing","Anthologies"};
-	bool have = false;
-	
-	cout<<"Enter the book tittle : ";
-	cin>>tittle;
-	
-	while(!have){
-		for(int i=0; i<25;i++)
+		if(press==1)
 		{
-			if(tittle == a[i])
-			{
-				have = true;
-			}
-		}
-		if (!have){
-			cout<< "Invalid!, Book doesn't exist, enter the book tittle : ";
-			cin >> tittle;
-		}
-	}
-		
+		bookcategories(); 
+	    }
+	
 }
-
 
 void bookcategories()
 {
@@ -170,6 +145,7 @@ void bookcategories()
 	}
 
 }
+
 void smath ()
 {
 	int x;
